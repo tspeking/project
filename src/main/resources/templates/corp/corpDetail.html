@@ -1,0 +1,169 @@
+<div class="modal fade" id="corp-detail" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="corp-detail-modal-title">企业信息详情</h3>
+            </div>
+            <div class="modal-body">
+                <form id="corp-detail-form">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 行业：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="industry" class="form-control" readonly="readonly"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 细分行业：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="subIndustry" class="form-control" readonly="readonly"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 企业名称：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="corpName" class="form-control" readonly="readonly"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col-sm-4">
+                           <div class="input-group">
+                               <span class="input-group-addon">  产业位置： </span>
+                               <div class="form-group">
+                                   <select class="form-control" name="industryLocation" disabled>
+                                   	   <option value="" selected>全产业链</option>
+                                       <option value="1">上游</option>
+                                       <option value="2">中游</option>
+                                       <option value="3">下游</option>
+                                       <option value="4">上游、中游</option>
+                                       <option value="5">中游、下游</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                   	</div>
+                   	<div class="row">
+                    	<div class="col-sm-4">
+                           <div class="input-group">
+                               <span class="input-group-addon">  是否龙头： </span>
+                               <div class="form-group">
+                                   <select class="form-control" name="isFlagship" disabled>
+                                       <option value="1">是</option>
+                                       <option value="2">否</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="row">
+                    	<div class="col-sm-4">
+                           <div class="input-group">
+                               <span class="input-group-addon">  是否定价权： </span>
+                               <div class="form-group">
+                                   <select class="form-control" name="isPricePower" disabled>
+                                       <option value="1">是</option>
+                                       <option value="2">否</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="row">
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	经营范围：
+					            </span>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3" name="businessScope" readonly="readonly"></textarea> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	市场份额：
+					            </span>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="2" name="marketShare" readonly="readonly"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 企业估值：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="fowardPrice" class="form-control" readonly="readonly"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col-sm-4">
+                           <div class="input-group">
+                               <span class="input-group-addon">  是否低估： </span>
+                               <div class="form-group">
+                                   <select class="form-control" name="isUnderestimate" disabled>
+                                       <option value="1">是</option>
+                                       <option value="2">否</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="row">
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	企业解析：
+					            </span>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="5" name="description" readonly="readonly"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	企业备注：
+					            </span>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="5" name="remark" readonly="readonly"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>

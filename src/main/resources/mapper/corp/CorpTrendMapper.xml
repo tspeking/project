@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.web.dao.CorpTrendMapper">
+  
+  <select id="findCorpTrends" resultType="CorpTrend" parameterType="CorpTrendVO">
+  		SELECT 
+			t.quota_id quotaId,
+			t.corp_name corpName,
+			t.quota_name quotaName,
+			t.quota_value quotaValue,
+			t.quota_type quotaType,
+			t.quota_time quotaTime,
+			t.create_time createTime 
+		FROM t_corp_quota_trend t 
+		WHERE 1 = 1 
+		<if test="corpName != null and corpName != ''">
+        	AND t.corp_name LIKE '%${corpName}%'
+	    </if>
+	    <if test="quotaType != null and quotaType != ''">
+        	AND t.quota_type = '${quotaType}'
+	    </if>
+	    <choose>
+        	<when test="sort =='asc'">
+            	order by  t.quota_time asc
+        	</when>
+        	<when test="sort =='desc'">
+            	order by  t.quota_time desc
+        	</when>
+        	<otherwise>
+            	order by  t.quota_time
+        	</otherwise>
+    	</choose>
+  </select>
+  
+  <select id="findCorpTrend" resultType="CorpTrend">
+		SELECT 
+			t.quota_id quotaId,
+			t.corp_name corpName,
+			t.quota_name quotaName,
+			t.quota_value quotaValue,
+			t.quota_type quotaType,
+			t.quota_time quotaTime,
+			t.create_time createTime 
+		FROM t_corp_quota_trend t  
+		where t.quota_id = #{quotaId}
+  </select>
+  
+  <select id="getSingleChartData" resultType="CorpTrend" parameterType="QuotaSearchVo">
+  		SELECT 
+			t.corp_name corpName,
+			t.quota_name quotaName,
+			t.quota_value quotaValue,
+			t.quota_type quotaType,
+			t.quota_time quotaTime
+		FROM t_corp_quota_trend t 
+		WHERE 1 = 1 
+		<if test="corpName != null and corpName != ''">
+        	AND t.corp_name LIKE '%${corpName}%'
+	    </if>
+	    <if test="quotaName != null and quotaName != ''">
+        	and t.quota_name = #{quotaName}  
+	    </if>
+		<if test="quotaType != null and quotaType != ''">
+        	and t.quota_type = #{quotaType}  
+	    </if>
+	    <choose>
+        	<when test="sort =='asc'">
+            	order by t.quota_time asc
+        	</when>
+        	<when test="sort =='desc'">
+            	order by t.quota_time desc
+        	</when>
+        	<otherwise>
+            	order by t.quota_time
+        	</otherwise>
+    	</choose>
+  		
+  </select>
+  
+</mapper>

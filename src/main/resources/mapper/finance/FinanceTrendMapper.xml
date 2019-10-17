@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.web.dao.FinanceTrendMapper">
+  <resultMap id="BaseResultMap" type="cc.mrbird.web.domain.FinanceTrend">
+    <id column="FINANCE_ID" jdbcType="DECIMAL" property="financeId" />
+    <result column="QUOTA_NAME" jdbcType="VARCHAR" property="quotaName" />
+    <result column="QUOTA_VALUE" jdbcType="VARCHAR" property="quotaValue" />
+    <result column="CRATE_TIME" jdbcType="TIMESTAMP" property="crateTime" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type"/>
+  </resultMap>
+  
+  <select id="findFinanceTrends" resultType="FinanceTrend" parameterType="FinanceTrendVO">
+  		select u.finance_id financeId,u.quota_name quotaName,
+  		u.quota_value quotaValue ,u.CRATE_TIME crateTime,u.type type 
+		from t_finance_trend u 
+		where 1=1 
+		<if test="type != null and type != ''">
+        	and u.type = #{type}  
+	    </if>
+		<if test="startTime != null and startTime != ''">
+        	and str_to_date(u.quota_name, '%Y%m%d') <![CDATA[>= ]]> str_to_date(#{startTime} , '%Y-%m-%d') 
+	    </if>
+	    <if test="endTime != null and endTime != ''">
+        	and str_to_date(u.quota_name, '%Y%m%d') <![CDATA[<= ]]> str_to_date(#{endTime} , '%Y-%m-%d') 
+	    </if>
+	    <choose>
+        	<when test="sort =='asc'">
+            	order by u.quota_name asc
+        	</when>
+        	<when test="sort =='desc'">
+            	order by u.quota_name desc
+        	</when>
+        	<otherwise>
+            	order by u.quota_name
+        	</otherwise>
+    	</choose>
+  		
+  </select>
+  
+  <select id="findFinanceTrend" resultType="FinanceTrend">
+		select u.finance_id financeId,u.quota_name quotaName,
+  		u.quota_value quotaValue ,u.CRATE_TIME crateTime,u.type type 
+		from t_finance_trend u 
+		where u.finance_id = #{financeId}
+  </select>
+  
+</mapper>

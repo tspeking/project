@@ -1,0 +1,65 @@
+<div class="modal fade" id="macrography-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="macrography-add-modal-title">新增宏观数据</h3>
+            </div>
+            <div class="modal-body">
+                <form id="macrography-add-form">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 日期：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="quotaName" class="form-control">
+                                    <input type="text" hidden name="financeId" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 数值：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="quotaValue" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col-sm-5">
+                           <div class="input-group">
+                               <span class="input-group-addon"> 类型： </span>
+                               <div class="form-group">
+                                   <select class="form-control" name="type">
+                                       <option value="1" selected>融资余额</option>
+                                       <option value="2">CPI</option>
+                                       <option value="3">M2</option>
+                                       <option value="4">社融</option>
+                                       <option value="5">GDP季度</option>
+                                       <option value="6">乘用车同比</option>
+                                       <option value="7">乘用车环比</option>
+                                       <option value="8">沪深交易量</option>
+                                       <option value="9">沪股通资金流入</option>
+                                       <option value="10">深股通资金流入</option>
+                                       <option value="11">北向资金</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="macrography-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>

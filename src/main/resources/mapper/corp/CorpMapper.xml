@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.web.dao.CorpMapper">
+  
+  <select id="findCorps" resultType="Corp" parameterType="CorpVO">
+  		SELECT 
+			t.corp_id corpId,
+			t.industry industry,
+			t.sub_industry subIndustry,
+			t.corp_name corpName,
+			t.industry_location industryLocation,
+			t.is_flagship isFlagship,
+			t.is_price_power isPricePower,
+		<!-- 	t.business_scope businessScope, -->
+			t.market_share marketShare,
+			t.foward_price fowardPrice,
+			t.is_underestimate isUnderestimate,
+			<!-- t.description description,
+			t.remark remark, -->
+			t.create_time createTime,
+			t.underestimate_region underestimateRegion,
+			t.centre_region centreRegion,
+			t.priority_level priorityLevel,
+			t.premium_price premiumPrice   
+		FROM t_corp t 
+		WHERE 1 = 1 
+		<if test="industry != null and industry != ''">
+        	AND t.industry LIKE '%${industry}%'
+	    </if>
+	    <if test="subIndustry != null and subIndustry != ''">
+        	AND t.sub_industry LIKE '%${subIndustry}%'
+	    </if>
+	    <if test="corpName != null and corpName != ''">
+        	AND t.corp_name LIKE '%${corpName}%'
+	    </if>
+	    <if test="fowardPrice != null and fowardPrice != ''">
+        	AND t.foward_price LIKE '%${fowardPrice}%'
+	    </if>
+	    <choose>
+        	<when test="sort =='asc'">
+            	order by  t.priority_level asc
+        	</when>
+        	<when test="sort =='desc'">
+            	order by  t.priority_level desc
+        	</when>
+        	<otherwise>
+            	order by  t.priority_level
+        	</otherwise>
+    	</choose>
+  </select>
+  
+  <select id="findCorp" resultType="Corp">
+		SELECT 
+			t.corp_id corpId,
+			t.industry industry,
+			t.sub_industry subIndustry,
+			t.corp_name corpName,
+			t.industry_location industryLocation,
+			t.is_flagship isFlagship,
+			t.is_price_power isPricePower,
+			t.business_scope businessScope,
+			t.market_share marketShare,
+			t.foward_price fowardPrice,
+			t.is_underestimate isUnderestimate,
+			t.description description,
+			t.remark remark,
+			t.create_time createTime,
+			t.underestimate_region underestimateRegion,
+			t.centre_region centreRegion,
+			t.priority_level priorityLevel,
+			t.premium_price premiumPrice  
+		FROM t_corp t 
+		where t.corp_id = #{corpId}
+  </select>
+  
+</mapper>

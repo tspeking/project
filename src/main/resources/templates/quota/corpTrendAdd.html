@@ -1,0 +1,98 @@
+<div class="modal fade" id="corpTrend-add" data-keyboard="false" data-backdrop="static" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="corpTrend-add-modal-title">新增企业指标信息</h3>
+            </div>
+            <div class="modal-body">
+                <form id="corpTrend-add-form">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 企业名称：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="corpName" class="form-control"/>
+                                    <input type="text" hidden name="quotaId" class="form-control"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col-sm-5">
+                           <div class="input-group">
+                               <span class="input-group-addon">  指标名称： </span>
+                               <div class="form-group">
+                                   <select class="form-control" name="quotaName">
+                                       <option value="0001">营业收入</option>
+                                       <option value="0002">毛利率</option>
+                                       <option value="0003">净利润率</option>
+                                       <option value="0004">经营性净利润率</option>
+                                       <option value="0005">经营性净利润增长率</option>
+                                       <option value="0006">净资产收益率</option>
+                                       <option value="0007">经营现金流量净额</option>
+                                       <option value="0008">投资现金流量净额</option>
+                                       <option value="0009">筹资现金流量净额</option>
+                                       <option value="0010">净现比</option>
+                                       <option value="0011">应收账款</option>
+                                       <option value="0012">应收票据</option>
+                                       <option value="0013">预收账款</option>
+                                       <option value="0014">流动比率</option>
+                                       <option value="0015">速动比率</option>
+                                       <option value="0016">现金比率</option>
+                                       <option value="0017">利息收入倍数</option>
+                                       <option value="0018">资产负债率</option>
+                                       <option value="0019">营业收入增长率</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                   	</div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 指标值：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="quotaValue" class="form-control"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="col-sm-4">
+                           <div class="input-group">
+                               <span class="input-group-addon">  指标类型： </span>
+                               <div class="form-group">
+                                   <select class="form-control" name="quotaType">
+                                       <option value="1">季度</option>
+                                       <option value="2">年度</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                   	</div>
+                   	<div class="row">
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 指标时间：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="quotaTime" class="form-control"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="corpTrend-add-button" name="save">保存</button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>

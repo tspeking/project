@@ -1,0 +1,108 @@
+<style type="text/css">
+
+.flexbox {
+    display: flex;
+    -webkit-align-items: center;
+    margin-bottom:5px;
+}
+
+</style>
+
+<div class="flexbox">
+	<label style="margin-top:10px;">开始时间:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" name="dateStart" id="dateStart" class="form-control" style="width: 10%;border:1px solid #DBDBDB;height:30px;">
+   	<label style="margin-top:10px;">&nbsp;&nbsp;&nbsp;&nbsp;结束时间:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input type="text" name="dateEnd" id="dateEnd" class="form-control" style="width: 10%;border:1px solid #DBDBDB;height:30px;">
+   	<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+   	<button type="button" class="btn btn-primary active" onClick="query()">查询</button>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container" style="height:300px"></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container_hushen" style="height:300px"></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container_hu_hk" style="height:300px"></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container_shen_hk" style="height:300px"></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container_north" style="height:300px"></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container_cpi" style="height:300px"></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container_m2" style="height:300px"></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container_gdp_quarter" style="height:300px"></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container_social_harmony" style="height:300px"></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container_car_same" style="height:300px"></div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-block">
+        <div id="container_car_last" style="height:300px"></div>
+    </div>
+</div>
+
+<script data-th-src="@{js/app/finance/info.js}"></script>
