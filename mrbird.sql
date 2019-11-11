@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2019-08-23 18:11:06
+Date: 2019-11-11 16:37:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -165,7 +165,7 @@ CREATE TABLE `qrtz_scheduler_state` (
 -- ----------------------------
 -- Records of qrtz_scheduler_state
 -- ----------------------------
-INSERT INTO `qrtz_scheduler_state` VALUES ('MyScheduler', 'DESKTOP-SMCTRIG1566554467675', '1566554857600', '15000');
+INSERT INTO `qrtz_scheduler_state` VALUES ('MyScheduler', 'DESKTOP-SMCTRIG1573460807013', '1573461399757', '15000');
 
 -- ----------------------------
 -- Table structure for qrtz_simple_triggers
@@ -426,7 +426,7 @@ CREATE TABLE `t_dept` (
   `ORDER_NUM` bigint(20) DEFAULT NULL COMMENT '排序',
   `CREATE_TIME` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`DEPT_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_dept
@@ -449,7 +449,7 @@ CREATE TABLE `t_dict` (
   `FIELD_NAME` varchar(100) NOT NULL COMMENT '字段名称',
   `TABLE_NAME` varchar(100) NOT NULL COMMENT '表名',
   PRIMARY KEY (`DICT_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_dict
@@ -478,7 +478,7 @@ CREATE TABLE `t_finance_trend` (
   `type` varchar(2) NOT NULL COMMENT '1 融资余额 2 CPI 3 M2 4 社融 5 GDP季度 6 乘用车同比 7 乘用车环比 8 沪深交易量走势',
   PRIMARY KEY (`finance_id`),
   UNIQUE KEY `quota_name` (`quota_name`,`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=548 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=806 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_finance_trend
@@ -931,7 +931,7 @@ INSERT INTO `t_finance_trend` VALUES ('496', '201907', '10100', '2019-08-12 09:2
 INSERT INTO `t_finance_trend` VALUES ('497', '201906', '10.7', '2019-08-12 09:36:24', '7');
 INSERT INTO `t_finance_trend` VALUES ('499', '201906', '-7.8', '2019-08-12 09:36:56', '6');
 INSERT INTO `t_finance_trend` VALUES ('500', '201907', '-4.3', '2019-08-13 03:49:28', '6');
-INSERT INTO `t_finance_trend` VALUES ('501', '20907', '-12.1', '2019-08-13 03:50:09', '7');
+INSERT INTO `t_finance_trend` VALUES ('501', '201907', '-12.1', '2019-08-13 03:50:09', '7');
 INSERT INTO `t_finance_trend` VALUES ('502', '20190812', '8818', '2019-08-13 10:24:10', '1');
 INSERT INTO `t_finance_trend` VALUES ('503', '20190813', '3385', '2019-08-13 10:24:28', '8');
 INSERT INTO `t_finance_trend` VALUES ('504', '20190813', '-15.82', '2019-08-13 10:24:40', '9');
@@ -977,6 +977,262 @@ INSERT INTO `t_finance_trend` VALUES ('544', '20190823', '4695', '2019-08-23 10:
 INSERT INTO `t_finance_trend` VALUES ('545', '20190823', '0.9195', '2019-08-23 10:03:44', '9');
 INSERT INTO `t_finance_trend` VALUES ('546', '20190823', '14.46', '2019-08-23 10:03:58', '10');
 INSERT INTO `t_finance_trend` VALUES ('547', '20190823', '15.38', '2019-08-23 10:04:12', '11');
+INSERT INTO `t_finance_trend` VALUES ('548', '20190823', '9030', '2019-08-26 09:55:29', '1');
+INSERT INTO `t_finance_trend` VALUES ('549', '20190826', '4610', '2019-08-26 09:55:52', '8');
+INSERT INTO `t_finance_trend` VALUES ('551', '20190826', '-21.07', '2019-08-26 10:03:33', '9');
+INSERT INTO `t_finance_trend` VALUES ('552', '20190826', '-5.3', '2019-08-26 10:03:45', '10');
+INSERT INTO `t_finance_trend` VALUES ('553', '20190826', '-26.37', '2019-08-26 10:03:58', '11');
+INSERT INTO `t_finance_trend` VALUES ('554', '20190827', '5581', '2019-08-27 12:47:42', '8');
+INSERT INTO `t_finance_trend` VALUES ('555', '20190826', '9070', '2019-08-27 12:52:37', '1');
+INSERT INTO `t_finance_trend` VALUES ('556', '20190827', '73.71', '2019-08-27 12:53:00', '9');
+INSERT INTO `t_finance_trend` VALUES ('557', '20190827', '43.94', '2019-08-27 12:53:14', '10');
+INSERT INTO `t_finance_trend` VALUES ('558', '20190827', '117.65', '2019-08-27 12:53:29', '11');
+INSERT INTO `t_finance_trend` VALUES ('559', '20190828', '4936', '2019-08-28 10:00:34', '8');
+INSERT INTO `t_finance_trend` VALUES ('560', '20190827', '9087', '2019-08-28 10:01:39', '1');
+INSERT INTO `t_finance_trend` VALUES ('561', '20190828', '-1.13', '2019-08-28 10:02:25', '9');
+INSERT INTO `t_finance_trend` VALUES ('562', '20190828', '-3.03', '2019-08-28 10:02:43', '10');
+INSERT INTO `t_finance_trend` VALUES ('563', '20190828', '-4.16', '2019-08-28 10:03:00', '11');
+INSERT INTO `t_finance_trend` VALUES ('564', '20190829', '4781', '2019-08-29 09:57:17', '8');
+INSERT INTO `t_finance_trend` VALUES ('565', '20190828', '9114', '2019-08-29 09:57:37', '1');
+INSERT INTO `t_finance_trend` VALUES ('566', '20190829', '5.67', '2019-08-29 09:57:54', '9');
+INSERT INTO `t_finance_trend` VALUES ('567', '20190829', '2', '2019-08-29 09:58:08', '10');
+INSERT INTO `t_finance_trend` VALUES ('568', '20190829', '7.67', '2019-08-29 09:58:20', '11');
+INSERT INTO `t_finance_trend` VALUES ('569', '20190830', '5546', '2019-08-30 09:54:03', '8');
+INSERT INTO `t_finance_trend` VALUES ('570', '20190829', '9145', '2019-08-30 09:54:49', '1');
+INSERT INTO `t_finance_trend` VALUES ('571', '20190830', '42.85', '2019-08-30 09:56:09', '9');
+INSERT INTO `t_finance_trend` VALUES ('572', '20190830', '28.25', '2019-08-30 09:56:20', '10');
+INSERT INTO `t_finance_trend` VALUES ('573', '20190830', '71.09', '2019-08-30 09:56:32', '11');
+INSERT INTO `t_finance_trend` VALUES ('574', '20190830', '9134', '2019-09-02 08:54:11', '1');
+INSERT INTO `t_finance_trend` VALUES ('575', '20190902', '5532', '2019-09-02 08:54:52', '8');
+INSERT INTO `t_finance_trend` VALUES ('576', '20190902', '32.52', '2019-09-02 08:55:05', '9');
+INSERT INTO `t_finance_trend` VALUES ('577', '20190902', '26.31', '2019-09-02 08:55:19', '10');
+INSERT INTO `t_finance_trend` VALUES ('578', '20190902', '58.83', '2019-09-02 08:55:34', '11');
+INSERT INTO `t_finance_trend` VALUES ('579', '20190902', '9181', '2019-09-03 11:57:03', '1');
+INSERT INTO `t_finance_trend` VALUES ('580', '20190903', '5643', '2019-09-03 11:57:20', '8');
+INSERT INTO `t_finance_trend` VALUES ('581', '20190903', '12.57', '2019-09-03 11:57:32', '9');
+INSERT INTO `t_finance_trend` VALUES ('582', '20190903', '-8.05', '2019-09-03 11:57:43', '10');
+INSERT INTO `t_finance_trend` VALUES ('583', '20190903', '4.51', '2019-09-03 11:57:55', '11');
+INSERT INTO `t_finance_trend` VALUES ('584', '20190903', '9208', '2019-09-06 03:40:49', '1');
+INSERT INTO `t_finance_trend` VALUES ('585', '20190904', '9242', '2019-09-06 03:41:06', '1');
+INSERT INTO `t_finance_trend` VALUES ('586', '20190904', '6058', '2019-09-06 03:41:21', '8');
+INSERT INTO `t_finance_trend` VALUES ('587', '20190904', '50.78', '2019-09-06 03:41:34', '9');
+INSERT INTO `t_finance_trend` VALUES ('588', '20190904', '6.18', '2019-09-06 03:41:45', '10');
+INSERT INTO `t_finance_trend` VALUES ('589', '20190904', '56.97', '2019-09-06 03:41:58', '11');
+INSERT INTO `t_finance_trend` VALUES ('590', '20190905', '7975', '2019-09-06 03:42:16', '8');
+INSERT INTO `t_finance_trend` VALUES ('591', '20190905', '57.13', '2019-09-06 03:42:28', '9');
+INSERT INTO `t_finance_trend` VALUES ('592', '20190905', '39.72', '2019-09-06 03:42:43', '10');
+INSERT INTO `t_finance_trend` VALUES ('593', '20190905', '96.85', '2019-09-06 03:42:55', '11');
+INSERT INTO `t_finance_trend` VALUES ('594', '20190905', '9308', '2019-09-06 09:24:57', '1');
+INSERT INTO `t_finance_trend` VALUES ('595', '20190906', '6339', '2019-09-06 09:25:14', '8');
+INSERT INTO `t_finance_trend` VALUES ('596', '20190906', '58.50', '2019-09-06 09:25:26', '9');
+INSERT INTO `t_finance_trend` VALUES ('597', '20190906', '32.71', '2019-09-06 09:25:37', '10');
+INSERT INTO `t_finance_trend` VALUES ('598', '20190906', '91.20', '2019-09-06 09:25:48', '11');
+INSERT INTO `t_finance_trend` VALUES ('599', '20190906', '9317', '2019-09-09 10:36:25', '1');
+INSERT INTO `t_finance_trend` VALUES ('600', '20190909', '7160', '2019-09-09 10:36:44', '8');
+INSERT INTO `t_finance_trend` VALUES ('601', '20190909', '16.6', '2019-09-09 10:36:57', '9');
+INSERT INTO `t_finance_trend` VALUES ('602', '20190909', '19.41', '2019-09-09 10:37:11', '10');
+INSERT INTO `t_finance_trend` VALUES ('603', '20190909', '36.01', '2019-09-09 10:37:23', '11');
+INSERT INTO `t_finance_trend` VALUES ('604', '20190910', '7022', '2019-09-10 10:16:52', '8');
+INSERT INTO `t_finance_trend` VALUES ('605', '20190909', '9427', '2019-09-10 10:17:53', '1');
+INSERT INTO `t_finance_trend` VALUES ('606', '20190910', '24.16', '2019-09-10 10:18:12', '9');
+INSERT INTO `t_finance_trend` VALUES ('607', '20190910', '6.07', '2019-09-10 10:18:23', '10');
+INSERT INTO `t_finance_trend` VALUES ('608', '20190910', '30.23', '2019-09-10 10:18:33', '11');
+INSERT INTO `t_finance_trend` VALUES ('609', '201908', '2.8', '2019-09-10 10:19:09', '2');
+INSERT INTO `t_finance_trend` VALUES ('610', '20190911', '6427', '2019-09-11 09:31:42', '8');
+INSERT INTO `t_finance_trend` VALUES ('611', '20190910', '9480', '2019-09-11 09:33:52', '1');
+INSERT INTO `t_finance_trend` VALUES ('612', '20190911', '22.49', '2019-09-11 09:35:01', '9');
+INSERT INTO `t_finance_trend` VALUES ('613', '20190911', '9.13', '2019-09-11 09:35:13', '10');
+INSERT INTO `t_finance_trend` VALUES ('614', '20190911', '31.63', '2019-09-11 09:35:25', '11');
+INSERT INTO `t_finance_trend` VALUES ('615', '201908', '8.2', '2019-09-11 09:36:33', '3');
+INSERT INTO `t_finance_trend` VALUES ('616', '201908', '19800', '2019-09-12 02:46:07', '4');
+INSERT INTO `t_finance_trend` VALUES ('617', '20190911', '9510', '2019-09-12 02:47:13', '1');
+INSERT INTO `t_finance_trend` VALUES ('618', '201908', '-9.9', '2019-09-12 02:50:50', '6');
+INSERT INTO `t_finance_trend` VALUES ('619', '201908', '5.4', '2019-09-12 02:51:04', '7');
+INSERT INTO `t_finance_trend` VALUES ('620', '20190916', '9546', '2019-09-17 09:22:10', '1');
+INSERT INTO `t_finance_trend` VALUES ('621', '20190912', '9468', '2019-09-17 09:22:32', '1');
+INSERT INTO `t_finance_trend` VALUES ('622', '20190917', '-3.33', '2019-09-17 09:24:00', '9');
+INSERT INTO `t_finance_trend` VALUES ('623', '20190917', '4.23', '2019-09-17 09:24:13', '10');
+INSERT INTO `t_finance_trend` VALUES ('624', '20190917', '0.8938', '2019-09-17 09:24:31', '11');
+INSERT INTO `t_finance_trend` VALUES ('625', '20190916', '15.95', '2019-09-17 09:24:58', '11');
+INSERT INTO `t_finance_trend` VALUES ('626', '20190916', '8.55', '2019-09-17 09:25:16', '9');
+INSERT INTO `t_finance_trend` VALUES ('627', '20190916', '7.4', '2019-09-17 09:25:25', '10');
+INSERT INTO `t_finance_trend` VALUES ('628', '20190912', '39.51', '2019-09-17 09:25:46', '11');
+INSERT INTO `t_finance_trend` VALUES ('629', '20190912', '20.02', '2019-09-17 09:26:03', '9');
+INSERT INTO `t_finance_trend` VALUES ('630', '20190912', '10.49', '2019-09-17 09:26:14', '10');
+INSERT INTO `t_finance_trend` VALUES ('631', '20190917', '5859', '2019-09-17 09:28:23', '8');
+INSERT INTO `t_finance_trend` VALUES ('632', '20190912', '5372', '2019-09-17 09:34:35', '8');
+INSERT INTO `t_finance_trend` VALUES ('633', '20190916', '5762', '2019-09-17 09:34:46', '8');
+INSERT INTO `t_finance_trend` VALUES ('634', '20190918', '4871', '2019-09-18 11:09:32', '8');
+INSERT INTO `t_finance_trend` VALUES ('635', '20190917', '9562', '2019-09-18 11:11:37', '1');
+INSERT INTO `t_finance_trend` VALUES ('636', '20190918', '28.83', '2019-09-18 11:12:37', '9');
+INSERT INTO `t_finance_trend` VALUES ('637', '20190918', '18.80', '2019-09-18 11:12:50', '10');
+INSERT INTO `t_finance_trend` VALUES ('638', '20190918', '47.63', '2019-09-18 11:13:04', '11');
+INSERT INTO `t_finance_trend` VALUES ('639', '20190919', '4914', '2019-09-19 09:41:48', '8');
+INSERT INTO `t_finance_trend` VALUES ('640', '20190918', '9574', '2019-09-19 09:42:34', '1');
+INSERT INTO `t_finance_trend` VALUES ('641', '20190919', '7.86', '2019-09-19 09:42:54', '9');
+INSERT INTO `t_finance_trend` VALUES ('642', '20190919', '26.33', '2019-09-19 09:43:05', '10');
+INSERT INTO `t_finance_trend` VALUES ('643', '20190919', '34.19', '2019-09-19 09:43:17', '11');
+INSERT INTO `t_finance_trend` VALUES ('644', '20190919', '9602', '2019-09-20 08:37:23', '1');
+INSERT INTO `t_finance_trend` VALUES ('645', '20190920', '5468', '2019-09-20 08:37:46', '8');
+INSERT INTO `t_finance_trend` VALUES ('646', '20190920', '87.78', '2019-09-20 08:37:59', '9');
+INSERT INTO `t_finance_trend` VALUES ('647', '20190920', '96.80', '2019-09-20 08:38:13', '10');
+INSERT INTO `t_finance_trend` VALUES ('648', '20190920', '184.58', '2019-09-20 08:38:29', '11');
+INSERT INTO `t_finance_trend` VALUES ('649', '20190920', '9577', '2019-09-23 09:01:21', '1');
+INSERT INTO `t_finance_trend` VALUES ('650', '20190923', '5080', '2019-09-23 09:01:39', '8');
+INSERT INTO `t_finance_trend` VALUES ('651', '20190923', '-17.97', '2019-09-23 09:01:53', '9');
+INSERT INTO `t_finance_trend` VALUES ('652', '20190923', '10.05', '2019-09-23 09:02:05', '10');
+INSERT INTO `t_finance_trend` VALUES ('653', '20190923', '-7.92', '2019-09-23 09:02:16', '11');
+INSERT INTO `t_finance_trend` VALUES ('654', '20190923', '9604', '2019-09-24 10:06:50', '1');
+INSERT INTO `t_finance_trend` VALUES ('655', '20190924', '5480', '2019-09-24 10:07:03', '8');
+INSERT INTO `t_finance_trend` VALUES ('656', '20190924', '10.94', '2019-09-24 10:07:15', '9');
+INSERT INTO `t_finance_trend` VALUES ('657', '20190924', '21.57', '2019-09-24 10:07:28', '10');
+INSERT INTO `t_finance_trend` VALUES ('658', '20190924', '32.51', '2019-09-24 10:07:42', '11');
+INSERT INTO `t_finance_trend` VALUES ('659', '20190924', '9604', '2019-09-25 10:44:25', '1');
+INSERT INTO `t_finance_trend` VALUES ('660', '20190925', '-0.9745', '2019-09-25 10:45:53', '9');
+INSERT INTO `t_finance_trend` VALUES ('661', '20190925', '12.15', '2019-09-25 10:46:03', '10');
+INSERT INTO `t_finance_trend` VALUES ('662', '20190925', '11.18', '2019-09-25 10:46:16', '11');
+INSERT INTO `t_finance_trend` VALUES ('663', '20190925', '5257', '2019-09-25 10:47:30', '8');
+INSERT INTO `t_finance_trend` VALUES ('664', '20190926', '5379', '2019-09-26 11:42:54', '8');
+INSERT INTO `t_finance_trend` VALUES ('665', '20190925', '9572', '2019-09-26 11:44:48', '1');
+INSERT INTO `t_finance_trend` VALUES ('666', '20190926', '18.53', '2019-09-26 11:45:12', '9');
+INSERT INTO `t_finance_trend` VALUES ('667', '20190926', '12.89', '2019-09-26 11:45:25', '10');
+INSERT INTO `t_finance_trend` VALUES ('668', '20190926', '31.42', '2019-09-26 11:45:42', '11');
+INSERT INTO `t_finance_trend` VALUES ('669', '20190930', '9372', '2019-10-08 09:44:38', '1');
+INSERT INTO `t_finance_trend` VALUES ('670', '20191008', '3729', '2019-10-08 09:45:02', '8');
+INSERT INTO `t_finance_trend` VALUES ('671', '20191008', '7.3', '2019-10-08 09:45:15', '9');
+INSERT INTO `t_finance_trend` VALUES ('672', '20191008', '17.87', '2019-10-08 09:45:32', '10');
+INSERT INTO `t_finance_trend` VALUES ('673', '20191008', '25.17', '2019-10-08 09:45:46', '11');
+INSERT INTO `t_finance_trend` VALUES ('674', '20191009', '9441', '2019-10-10 09:44:27', '1');
+INSERT INTO `t_finance_trend` VALUES ('675', '20191010', '4205', '2019-10-10 09:44:55', '8');
+INSERT INTO `t_finance_trend` VALUES ('676', '20191010', '5.48', '2019-10-10 09:45:10', '9');
+INSERT INTO `t_finance_trend` VALUES ('677', '20191010', '2.66', '2019-10-10 09:45:23', '10');
+INSERT INTO `t_finance_trend` VALUES ('678', '20191010', '8.14', '2019-10-10 09:45:36', '11');
+INSERT INTO `t_finance_trend` VALUES ('679', '20191008', '9551', '2019-10-10 10:03:37', '1');
+INSERT INTO `t_finance_trend` VALUES ('680', '20191009', '3657', '2019-10-10 10:03:55', '8');
+INSERT INTO `t_finance_trend` VALUES ('682', '20191009', '-0.37', '2019-10-10 10:04:21', '9');
+INSERT INTO `t_finance_trend` VALUES ('683', '20191009', '-16.59', '2019-10-10 10:04:36', '10');
+INSERT INTO `t_finance_trend` VALUES ('684', '20191009', '-16.95', '2019-10-10 10:04:52', '11');
+INSERT INTO `t_finance_trend` VALUES ('685', '20191010', '9467', '2019-10-11 10:01:30', '1');
+INSERT INTO `t_finance_trend` VALUES ('686', '20191011', '4565', '2019-10-11 10:01:54', '8');
+INSERT INTO `t_finance_trend` VALUES ('687', '20191011', '32.29', '2019-10-11 10:02:07', '9');
+INSERT INTO `t_finance_trend` VALUES ('688', '20191011', '14.43', '2019-10-11 10:02:20', '10');
+INSERT INTO `t_finance_trend` VALUES ('689', '20191011', '46.71', '2019-10-11 10:02:32', '11');
+INSERT INTO `t_finance_trend` VALUES ('690', '20191011', '9444', '2019-10-14 10:02:34', '1');
+INSERT INTO `t_finance_trend` VALUES ('691', '20191014', '5350', '2019-10-14 10:02:52', '8');
+INSERT INTO `t_finance_trend` VALUES ('692', '20191014', '8.24', '2019-10-14 10:03:17', '9');
+INSERT INTO `t_finance_trend` VALUES ('693', '20191014', '24.47', '2019-10-14 10:03:35', '10');
+INSERT INTO `t_finance_trend` VALUES ('694', '20191014', '32.71', '2019-10-14 10:03:47', '11');
+INSERT INTO `t_finance_trend` VALUES ('695', '20191014', '9507', '2019-10-15 10:53:29', '1');
+INSERT INTO `t_finance_trend` VALUES ('696', '20191015', '4591', '2019-10-15 10:53:53', '8');
+INSERT INTO `t_finance_trend` VALUES ('697', '20191015', '30.83', '2019-10-15 10:54:04', '9');
+INSERT INTO `t_finance_trend` VALUES ('698', '20191015', '13.40', '2019-10-15 10:54:14', '10');
+INSERT INTO `t_finance_trend` VALUES ('699', '20191015', '44.23', '2019-10-15 10:54:25', '11');
+INSERT INTO `t_finance_trend` VALUES ('700', '201909', '8.4', '2019-10-15 10:56:16', '3');
+INSERT INTO `t_finance_trend` VALUES ('701', '201909', '3', '2019-10-15 10:57:40', '2');
+INSERT INTO `t_finance_trend` VALUES ('702', '201909', '-5.2', '2019-10-15 10:58:32', '6');
+INSERT INTO `t_finance_trend` VALUES ('703', '201909', '16', '2019-10-15 10:58:46', '7');
+INSERT INTO `t_finance_trend` VALUES ('704', '201909', '22700', '2019-10-16 00:43:22', '4');
+INSERT INTO `t_finance_trend` VALUES ('705', '20191015', '9494', '2019-10-16 10:45:08', '1');
+INSERT INTO `t_finance_trend` VALUES ('706', '20191016', '4233', '2019-10-16 10:45:24', '8');
+INSERT INTO `t_finance_trend` VALUES ('707', '20191016', '11.19', '2019-10-16 10:45:35', '9');
+INSERT INTO `t_finance_trend` VALUES ('708', '20191016', '24.07', '2019-10-16 10:45:47', '10');
+INSERT INTO `t_finance_trend` VALUES ('709', '20191016', '35.25', '2019-10-16 10:46:00', '11');
+INSERT INTO `t_finance_trend` VALUES ('710', '20191017', '3611', '2019-10-17 10:32:34', '8');
+INSERT INTO `t_finance_trend` VALUES ('711', '20191016', '9502', '2019-10-17 10:32:51', '1');
+INSERT INTO `t_finance_trend` VALUES ('712', '20191017', '5.78', '2019-10-17 10:33:02', '9');
+INSERT INTO `t_finance_trend` VALUES ('713', '20191017', '19.58', '2019-10-17 10:33:15', '10');
+INSERT INTO `t_finance_trend` VALUES ('714', '20191017', '25.36', '2019-10-17 10:33:29', '11');
+INSERT INTO `t_finance_trend` VALUES ('715', '20191017', '9503', '2019-10-18 11:25:15', '1');
+INSERT INTO `t_finance_trend` VALUES ('716', '20191018', '4158', '2019-10-18 11:25:27', '8');
+INSERT INTO `t_finance_trend` VALUES ('717', '20191018', '-9.51', '2019-10-18 11:25:42', '9');
+INSERT INTO `t_finance_trend` VALUES ('718', '20191018', '7.81', '2019-10-18 11:25:54', '10');
+INSERT INTO `t_finance_trend` VALUES ('719', '20191018', '-1.71', '2019-10-18 11:26:10', '11');
+INSERT INTO `t_finance_trend` VALUES ('720', '2019年1-3季度', '6.2', '2019-10-18 11:27:09', '5');
+INSERT INTO `t_finance_trend` VALUES ('721', '20191018', '9471', '2019-10-21 10:06:20', '1');
+INSERT INTO `t_finance_trend` VALUES ('722', '20191021', '3699', '2019-10-21 10:06:40', '8');
+INSERT INTO `t_finance_trend` VALUES ('723', '20191021', '24.93', '2019-10-21 10:07:04', '9');
+INSERT INTO `t_finance_trend` VALUES ('724', '20191021', '9.97', '2019-10-21 10:07:19', '10');
+INSERT INTO `t_finance_trend` VALUES ('725', '20191021', '34.9', '2019-10-21 10:07:35', '11');
+INSERT INTO `t_finance_trend` VALUES ('726', '20191021', '9474', '2019-10-22 10:48:34', '1');
+INSERT INTO `t_finance_trend` VALUES ('727', '20191022', '3569', '2019-10-22 10:48:52', '8');
+INSERT INTO `t_finance_trend` VALUES ('728', '20191022', '6.84', '2019-10-22 10:49:04', '9');
+INSERT INTO `t_finance_trend` VALUES ('729', '20191022', '1.22', '2019-10-22 10:49:16', '10');
+INSERT INTO `t_finance_trend` VALUES ('730', '20191022', '8.06', '2019-10-22 10:49:27', '11');
+INSERT INTO `t_finance_trend` VALUES ('731', '20190926', '9521', '2019-10-22 10:53:00', '1');
+INSERT INTO `t_finance_trend` VALUES ('732', '20190927', '9474', '2019-10-22 10:53:12', '1');
+INSERT INTO `t_finance_trend` VALUES ('733', '20190927', '3976', '2019-10-22 10:56:37', '8');
+INSERT INTO `t_finance_trend` VALUES ('734', '20190930', '3524', '2019-10-22 10:56:55', '8');
+INSERT INTO `t_finance_trend` VALUES ('735', '20191022', '9485', '2019-10-23 10:00:41', '1');
+INSERT INTO `t_finance_trend` VALUES ('736', '20191023', '3682', '2019-10-23 10:00:53', '8');
+INSERT INTO `t_finance_trend` VALUES ('737', '20191023', '-8.55', '2019-10-23 10:01:04', '9');
+INSERT INTO `t_finance_trend` VALUES ('738', '20191023', '-1.48', '2019-10-23 10:01:15', '10');
+INSERT INTO `t_finance_trend` VALUES ('739', '20191023', '-10.03', '2019-10-23 10:01:27', '11');
+INSERT INTO `t_finance_trend` VALUES ('740', '20191023', '9492', '2019-10-29 10:20:21', '1');
+INSERT INTO `t_finance_trend` VALUES ('741', '20191024', '9505', '2019-10-29 10:20:35', '1');
+INSERT INTO `t_finance_trend` VALUES ('742', '20191025', '9508', '2019-10-29 10:20:52', '1');
+INSERT INTO `t_finance_trend` VALUES ('743', '20191028', '9562', '2019-10-29 10:21:08', '1');
+INSERT INTO `t_finance_trend` VALUES ('744', '20191024', '3602', '2019-10-29 10:21:32', '8');
+INSERT INTO `t_finance_trend` VALUES ('745', '20191024', '-1.8', '2019-10-29 10:21:46', '9');
+INSERT INTO `t_finance_trend` VALUES ('746', '20191024', '14.84', '2019-10-29 10:22:00', '10');
+INSERT INTO `t_finance_trend` VALUES ('747', '20191024', '13.05', '2019-10-29 10:22:11', '11');
+INSERT INTO `t_finance_trend` VALUES ('748', '20191025', '3517', '2019-10-29 10:22:29', '8');
+INSERT INTO `t_finance_trend` VALUES ('749', '20191025', '4.99', '2019-10-29 10:22:45', '9');
+INSERT INTO `t_finance_trend` VALUES ('750', '20191025', '19.81', '2019-10-29 10:22:57', '10');
+INSERT INTO `t_finance_trend` VALUES ('751', '20191025', '24.8', '2019-10-29 10:23:09', '11');
+INSERT INTO `t_finance_trend` VALUES ('752', '20191028', '5203', '2019-10-29 10:23:31', '8');
+INSERT INTO `t_finance_trend` VALUES ('753', '20191028', '20.05', '2019-10-29 10:23:44', '9');
+INSERT INTO `t_finance_trend` VALUES ('754', '20191028', '17.05', '2019-10-29 10:23:55', '10');
+INSERT INTO `t_finance_trend` VALUES ('755', '20191028', '37.09', '2019-10-29 10:24:06', '11');
+INSERT INTO `t_finance_trend` VALUES ('756', '20191029', '5388', '2019-10-29 10:24:23', '8');
+INSERT INTO `t_finance_trend` VALUES ('757', '20191029', '12.04', '2019-10-29 10:24:36', '9');
+INSERT INTO `t_finance_trend` VALUES ('758', '20191029', '19.76', '2019-10-29 10:24:48', '10');
+INSERT INTO `t_finance_trend` VALUES ('759', '20191029', '31.8', '2019-10-29 10:24:59', '11');
+INSERT INTO `t_finance_trend` VALUES ('760', '20191029', '9555', '2019-10-30 10:03:47', '1');
+INSERT INTO `t_finance_trend` VALUES ('761', '20191030', '4673', '2019-10-30 10:04:07', '8');
+INSERT INTO `t_finance_trend` VALUES ('762', '20191030', '9.61', '2019-10-30 10:04:18', '9');
+INSERT INTO `t_finance_trend` VALUES ('763', '20191030', '27.61', '2019-10-30 10:04:30', '10');
+INSERT INTO `t_finance_trend` VALUES ('764', '20191030', '37.22', '2019-10-30 10:04:41', '11');
+INSERT INTO `t_finance_trend` VALUES ('765', '20191030', '9554', '2019-10-31 09:52:38', '1');
+INSERT INTO `t_finance_trend` VALUES ('766', '20191031', '4511', '2019-10-31 09:52:56', '8');
+INSERT INTO `t_finance_trend` VALUES ('767', '20191031', '36.97', '2019-10-31 09:53:12', '9');
+INSERT INTO `t_finance_trend` VALUES ('768', '20191031', '48.62', '2019-10-31 09:53:25', '10');
+INSERT INTO `t_finance_trend` VALUES ('769', '20191031', '85.59', '2019-10-31 09:53:36', '11');
+INSERT INTO `t_finance_trend` VALUES ('770', '20191031', '9532', '2019-11-01 10:12:23', '1');
+INSERT INTO `t_finance_trend` VALUES ('771', '20191101', '4348', '2019-11-01 10:12:57', '8');
+INSERT INTO `t_finance_trend` VALUES ('772', '20191101', '38.12', '2019-11-01 10:13:12', '9');
+INSERT INTO `t_finance_trend` VALUES ('773', '20191101', '48.9', '2019-11-01 10:13:28', '10');
+INSERT INTO `t_finance_trend` VALUES ('774', '20191101', '87.03', '2019-11-01 10:13:41', '11');
+INSERT INTO `t_finance_trend` VALUES ('775', '20191104', '4694', '2019-11-06 10:26:42', '8');
+INSERT INTO `t_finance_trend` VALUES ('776', '20191101', '9532', '2019-11-06 10:26:53', '1');
+INSERT INTO `t_finance_trend` VALUES ('777', '20191104', '26.32', '2019-11-06 10:27:08', '9');
+INSERT INTO `t_finance_trend` VALUES ('778', '20191104', '20.65', '2019-11-06 10:27:19', '10');
+INSERT INTO `t_finance_trend` VALUES ('779', '20191104', '46.98', '2019-11-06 10:27:33', '11');
+INSERT INTO `t_finance_trend` VALUES ('780', '20191105', '4814', '2019-11-06 10:27:50', '8');
+INSERT INTO `t_finance_trend` VALUES ('781', '20191104', '9551', '2019-11-06 10:28:05', '1');
+INSERT INTO `t_finance_trend` VALUES ('782', '20191105', '36.17', '2019-11-06 10:28:21', '9');
+INSERT INTO `t_finance_trend` VALUES ('783', '20191105', '26.24', '2019-11-06 10:28:34', '10');
+INSERT INTO `t_finance_trend` VALUES ('784', '20191105', '62.41', '2019-11-06 10:28:46', '11');
+INSERT INTO `t_finance_trend` VALUES ('785', '20191105', '9567', '2019-11-06 10:28:57', '1');
+INSERT INTO `t_finance_trend` VALUES ('786', '20191106', '4524', '2019-11-06 10:29:13', '8');
+INSERT INTO `t_finance_trend` VALUES ('787', '20191106', '13.81', '2019-11-06 10:29:24', '9');
+INSERT INTO `t_finance_trend` VALUES ('788', '20191106', '4.85', '2019-11-06 10:29:36', '10');
+INSERT INTO `t_finance_trend` VALUES ('789', '20191106', '18.66', '2019-11-06 10:29:48', '11');
+INSERT INTO `t_finance_trend` VALUES ('790', '20191106', '9568', '2019-11-07 09:54:58', '1');
+INSERT INTO `t_finance_trend` VALUES ('791', '20191107', '3989', '2019-11-07 09:55:16', '8');
+INSERT INTO `t_finance_trend` VALUES ('792', '20191107', '10.59', '2019-11-07 09:55:29', '9');
+INSERT INTO `t_finance_trend` VALUES ('793', '20191107', '22.52', '2019-11-07 09:55:40', '10');
+INSERT INTO `t_finance_trend` VALUES ('794', '20191107', '33.11', '2019-11-07 09:55:50', '11');
+INSERT INTO `t_finance_trend` VALUES ('795', '20191107', '9580', '2019-11-08 09:42:39', '1');
+INSERT INTO `t_finance_trend` VALUES ('796', '20191108', '4493', '2019-11-08 09:42:55', '8');
+INSERT INTO `t_finance_trend` VALUES ('797', '20191108', '-1.59', '2019-11-08 09:43:09', '9');
+INSERT INTO `t_finance_trend` VALUES ('798', '20191108', '26.04', '2019-11-08 09:43:21', '10');
+INSERT INTO `t_finance_trend` VALUES ('799', '20191108', '24.44', '2019-11-08 09:43:30', '11');
+INSERT INTO `t_finance_trend` VALUES ('800', '20191108', '9562', '2019-11-11 08:31:55', '1');
+INSERT INTO `t_finance_trend` VALUES ('801', '20191111', '4229', '2019-11-11 08:34:34', '8');
+INSERT INTO `t_finance_trend` VALUES ('802', '20191111', '3.49', '2019-11-11 08:34:52', '9');
+INSERT INTO `t_finance_trend` VALUES ('803', '20191111', '13.48', '2019-11-11 08:35:03', '10');
+INSERT INTO `t_finance_trend` VALUES ('804', '20191111', '16.98', '2019-11-11 08:35:14', '11');
+INSERT INTO `t_finance_trend` VALUES ('805', '201910', '3.8', '2019-11-11 08:36:10', '2');
 
 -- ----------------------------
 -- Table structure for t_job
@@ -992,7 +1248,7 @@ CREATE TABLE `t_job` (
   `REMARK` varchar(200) DEFAULT NULL COMMENT '备注',
   `CREATE_TIME` datetime DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`JOB_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_job
@@ -1066,7 +1322,7 @@ CREATE TABLE `t_log` (
   `CREATE_TIME` datetime DEFAULT NULL COMMENT '创建时间',
   `location` varchar(50) DEFAULT NULL COMMENT '操作地点',
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=1852 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2165 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_log
@@ -2090,6 +2346,319 @@ INSERT INTO `t_log` VALUES ('1848', 'MrBird', '新增宏观数据', '88', 'cc.mr
 INSERT INTO `t_log` VALUES ('1849', 'MrBird', '新增宏观数据', '98', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@66362c62\"', '127.0.0.1', '2019-08-23 10:03:58', '内网IP|0|0|内网IP|内网IP');
 INSERT INTO `t_log` VALUES ('1850', 'MrBird', '新增宏观数据', '89', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@65a3ec23\"', '127.0.0.1', '2019-08-23 10:04:12', '内网IP|0|0|内网IP|内网IP');
 INSERT INTO `t_log` VALUES ('1851', 'MrBird', '修改宏观数据', '88', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@15cf80a4\"', '127.0.0.1', '2019-08-23 10:06:00', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1852', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Fri Aug 23 18:02:40 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-08-26 09:54:59', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1853', 'MrBird', '新增宏观数据', '84', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1054558\"', '127.0.0.1', '2019-08-26 09:55:29', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1854', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@414dbba4\"', '127.0.0.1', '2019-08-26 09:55:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1855', 'MrBird', '新增宏观数据', '297', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7c7ff739\"', '127.0.0.1', '2019-08-26 09:56:22', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1856', 'MrBird', '修改宏观数据', '47', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@3aaacedd\"', '127.0.0.1', '2019-08-26 09:56:49', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1857', 'MrBird', '修改宏观数据', '6', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2beed449\"', '127.0.0.1', '2019-08-26 09:57:05', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1858', 'MrBird', '修改宏观数据', '3', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2017b02c\"', '127.0.0.1', '2019-08-26 09:57:18', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1859', 'MrBird', '修改宏观数据', '4', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@67774be3\"', '127.0.0.1', '2019-08-26 09:57:32', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1860', 'MrBird', '新增宏观数据', '85', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@52780636\"', '127.0.0.1', '2019-08-26 10:03:33', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1861', 'MrBird', '新增宏观数据', '84', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1bb83ba9\"', '127.0.0.1', '2019-08-26 10:03:45', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1862', 'MrBird', '新增宏观数据', '78', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@53d4d2f4\"', '127.0.0.1', '2019-08-26 10:03:58', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1863', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Mon Aug 26 17:54:58 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-08-27 12:47:22', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1864', 'MrBird', '新增宏观数据', '40', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2a67b65d\"', '127.0.0.1', '2019-08-27 12:47:42', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1865', 'MrBird', '修改宏观数据', '86', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@16a37560\"', '127.0.0.1', '2019-08-27 12:48:00', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1866', 'MrBird', '修改宏观数据', '12', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@58cb0586\"', '127.0.0.1', '2019-08-27 12:48:22', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1867', 'MrBird', '修改宏观数据', '5', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5d11b27e\"', '127.0.0.1', '2019-08-27 12:48:41', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1868', 'MrBird', '修改宏观数据', '4', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@76ca19d\"', '127.0.0.1', '2019-08-27 12:48:59', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1869', 'MrBird', '修改宏观数据', '5', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@b754329\"', '127.0.0.1', '2019-08-27 12:49:24', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1870', 'MrBird', '新增宏观数据', '84', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@36d78ebc\"', '127.0.0.1', '2019-08-27 12:52:37', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1871', 'MrBird', '新增宏观数据', '125', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@43a6121c\"', '127.0.0.1', '2019-08-27 12:53:01', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1872', 'MrBird', '新增宏观数据', '122', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7c03470a\"', '127.0.0.1', '2019-08-27 12:53:14', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1873', 'MrBird', '新增宏观数据', '45', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@512001db\"', '127.0.0.1', '2019-08-27 12:53:29', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1874', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Tue Aug 27 20:47:22 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-08-28 10:00:06', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1875', 'MrBird', '新增宏观数据', '92', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@639491aa\"', '127.0.0.1', '2019-08-28 10:00:34', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1876', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@709f8078\"', '127.0.0.1', '2019-08-28 10:01:39', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1877', 'MrBird', '新增宏观数据', '81', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@32bd17ca\"', '127.0.0.1', '2019-08-28 10:02:25', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1878', 'MrBird', '新增宏观数据', '82', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5f19d825\"', '127.0.0.1', '2019-08-28 10:02:43', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1879', 'MrBird', '新增宏观数据', '66', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@316001e1\"', '127.0.0.1', '2019-08-28 10:03:01', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1880', 'MrBird', '访问系统', '4', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Aug 28 18:00:06 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-08-29 09:55:35', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1881', 'MrBird', '修改宏观数据', '30', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@301c8f5d\"', '127.0.0.1', '2019-08-29 09:56:32', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1882', 'MrBird', '新增宏观数据', '65', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@50e76aa2\"', '127.0.0.1', '2019-08-29 09:57:17', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1883', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@3918e1d4\"', '127.0.0.1', '2019-08-29 09:57:38', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1884', 'MrBird', '新增宏观数据', '89', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5d07aff6\"', '127.0.0.1', '2019-08-29 09:57:54', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1885', 'MrBird', '新增宏观数据', '80', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@466d0ec8\"', '127.0.0.1', '2019-08-29 09:58:08', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1886', 'MrBird', '新增宏观数据', '136', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@110e7a29\"', '127.0.0.1', '2019-08-29 09:58:20', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1887', 'MrBird', '访问系统', '1', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Thu Aug 29 17:55:35 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-08-30 09:53:35', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1888', 'MrBird', '新增宏观数据', '111', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@e57ca83\"', '127.0.0.1', '2019-08-30 09:54:03', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1889', 'MrBird', '新增宏观数据', '84', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6db7218e\"', '127.0.0.1', '2019-08-30 09:54:50', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1890', 'MrBird', '新增宏观数据', '76', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@50e76aa2\"', '127.0.0.1', '2019-08-30 09:56:09', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1891', 'MrBird', '新增宏观数据', '62', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@31c9896c\"', '127.0.0.1', '2019-08-30 09:56:20', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1892', 'MrBird', '新增宏观数据', '76', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7304ac78\"', '127.0.0.1', '2019-08-30 09:56:32', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1893', 'MrBird', '访问系统', '3', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Fri Aug 30 17:53:35 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-02 08:53:34', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1894', 'MrBird', '新增宏观数据', '81', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@40e0d86e\"', '127.0.0.1', '2019-09-02 08:54:11', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1895', 'MrBird', '新增宏观数据', '81', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2f88823a\"', '127.0.0.1', '2019-09-02 08:54:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1896', 'MrBird', '新增宏观数据', '97', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6e1f68c\"', '127.0.0.1', '2019-09-02 08:55:05', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1897', 'MrBird', '新增宏观数据', '95', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@e04d77a\"', '127.0.0.1', '2019-09-02 08:55:19', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1898', 'MrBird', '新增宏观数据', '96', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2eba8537\"', '127.0.0.1', '2019-09-02 08:55:35', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1899', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Mon Sep 02 16:53:34 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-03 11:56:43', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1900', 'MrBird', '新增宏观数据', '78', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@548fb4ff\"', '127.0.0.1', '2019-09-03 11:57:03', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1901', 'MrBird', '新增宏观数据', '85', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@3f15e186\"', '127.0.0.1', '2019-09-03 11:57:20', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1902', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@349ee897\"', '127.0.0.1', '2019-09-03 11:57:32', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1903', 'MrBird', '新增宏观数据', '80', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5c066ea\"', '127.0.0.1', '2019-09-03 11:57:43', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1904', 'MrBird', '新增宏观数据', '76', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@454b0e4\"', '127.0.0.1', '2019-09-03 11:57:55', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1905', 'MrBird', '访问系统', '1', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Tue Sep 03 19:56:42 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-06 03:40:10', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1906', 'MrBird', '新增宏观数据', '97', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@48a318e6\"', '127.0.0.1', '2019-09-06 03:40:49', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1907', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7faf2aff\"', '127.0.0.1', '2019-09-06 03:41:06', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1908', 'MrBird', '新增宏观数据', '90', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2fbffc1c\"', '127.0.0.1', '2019-09-06 03:41:21', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1909', 'MrBird', '新增宏观数据', '54', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6f02cae8\"', '127.0.0.1', '2019-09-06 03:41:34', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1910', 'MrBird', '新增宏观数据', '85', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@65a3ec23\"', '127.0.0.1', '2019-09-06 03:41:46', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1911', 'MrBird', '新增宏观数据', '82', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@69b1ed92\"', '127.0.0.1', '2019-09-06 03:41:58', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1912', 'MrBird', '新增宏观数据', '42', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@72d0b51a\"', '127.0.0.1', '2019-09-06 03:42:16', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1913', 'MrBird', '新增宏观数据', '45', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@483f23e8\"', '127.0.0.1', '2019-09-06 03:42:28', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1914', 'MrBird', '新增宏观数据', '90', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4e103f9c\"', '127.0.0.1', '2019-09-06 03:42:43', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1915', 'MrBird', '新增宏观数据', '83', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1f3f343c\"', '127.0.0.1', '2019-09-06 03:42:55', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1916', 'MrBird', '访问系统', '3', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Fri Sep 06 11:40:10 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-06 09:24:29', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1917', 'MrBird', '新增宏观数据', '49', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1c32fd25\"', '127.0.0.1', '2019-09-06 09:24:57', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1918', 'MrBird', '新增宏观数据', '47', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2ec0bb23\"', '127.0.0.1', '2019-09-06 09:25:14', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1919', 'MrBird', '新增宏观数据', '46', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@406363c6\"', '127.0.0.1', '2019-09-06 09:25:26', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1920', 'MrBird', '新增宏观数据', '74', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@50db894f\"', '127.0.0.1', '2019-09-06 09:25:37', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1921', 'MrBird', '新增宏观数据', '83', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5c58ac4c\"', '127.0.0.1', '2019-09-06 09:25:48', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1922', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Fri Sep 06 17:24:29 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-09 10:33:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1923', 'MrBird', '新增宏观数据', '308', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@575418df\"', '127.0.0.1', '2019-09-09 10:36:25', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1924', 'MrBird', '新增宏观数据', '132', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6c467aa\"', '127.0.0.1', '2019-09-09 10:36:44', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1925', 'MrBird', '新增宏观数据', '174', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@49ce495c\"', '127.0.0.1', '2019-09-09 10:36:57', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1926', 'MrBird', '新增宏观数据', '66', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1d0e92c0\"', '127.0.0.1', '2019-09-09 10:37:11', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1927', 'MrBird', '新增宏观数据', '137', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@454b0e4\"', '127.0.0.1', '2019-09-09 10:37:23', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1928', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Mon Sep 09 18:33:52 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-10 10:16:27', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1929', 'MrBird', '新增宏观数据', '105', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@bb2b4e9\"', '127.0.0.1', '2019-09-10 10:16:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1930', 'MrBird', '新增宏观数据', '51', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@423f657a\"', '127.0.0.1', '2019-09-10 10:17:53', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1931', 'MrBird', '新增宏观数据', '54', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@798f65ba\"', '127.0.0.1', '2019-09-10 10:18:12', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1932', 'MrBird', '新增宏观数据', '49', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@708f3033\"', '127.0.0.1', '2019-09-10 10:18:23', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1933', 'MrBird', '新增宏观数据', '38', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@61d7c8d\"', '127.0.0.1', '2019-09-10 10:18:34', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1934', 'MrBird', '新增宏观数据', '83', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2aa0419d\"', '127.0.0.1', '2019-09-10 10:19:09', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1935', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Tue Sep 10 18:16:26 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-11 09:31:16', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1936', 'MrBird', '新增宏观数据', '93', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@794aa660\"', '127.0.0.1', '2019-09-11 09:31:42', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1937', 'MrBird', '新增宏观数据', '83', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@bd0f3ba\"', '127.0.0.1', '2019-09-11 09:33:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1938', 'MrBird', '新增宏观数据', '96', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1f1552c0\"', '127.0.0.1', '2019-09-11 09:35:01', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1939', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@25173241\"', '127.0.0.1', '2019-09-11 09:35:13', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1940', 'MrBird', '新增宏观数据', '80', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@612ec1\"', '127.0.0.1', '2019-09-11 09:35:25', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1941', 'MrBird', '新增宏观数据', '57', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@58585314\"', '127.0.0.1', '2019-09-11 09:36:33', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1942', 'MrBird', '访问系统', '3', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Sep 11 17:31:15 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-12 02:45:17', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1943', 'MrBird', '新增宏观数据', '88', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@3433c300\"', '127.0.0.1', '2019-09-12 02:46:07', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1944', 'MrBird', '新增宏观数据', '80', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@56231673\"', '127.0.0.1', '2019-09-12 02:47:13', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1945', 'MrBird', '新增宏观数据', '96', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1ee6fedf\"', '127.0.0.1', '2019-09-12 02:50:50', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1946', 'MrBird', '新增宏观数据', '94', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@50d22d85\"', '127.0.0.1', '2019-09-12 02:51:04', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1947', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Thu Sep 12 10:45:16 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-17 09:21:00', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1948', 'MrBird', '新增宏观数据', '66', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@432b7717\"', '127.0.0.1', '2019-09-17 09:22:10', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1949', 'MrBird', '新增宏观数据', '70', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@3a0323e4\"', '127.0.0.1', '2019-09-17 09:22:32', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1950', 'MrBird', '修改宏观数据', '54', 'cc.mrbird.web.controller.FinanceController.updateMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@e713be6\"', '127.0.0.1', '2019-09-17 09:22:57', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1951', 'MrBird', '新增宏观数据', '90', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6bfcbc71\"', '127.0.0.1', '2019-09-17 09:24:00', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1952', 'MrBird', '新增宏观数据', '55', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6f89e1e7\"', '127.0.0.1', '2019-09-17 09:24:13', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1953', 'MrBird', '新增宏观数据', '51', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@62398263\"', '127.0.0.1', '2019-09-17 09:24:31', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1954', 'MrBird', '新增宏观数据', '50', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@240033e2\"', '127.0.0.1', '2019-09-17 09:24:58', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1955', 'MrBird', '新增宏观数据', '70', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@51c6ffe0\"', '127.0.0.1', '2019-09-17 09:25:16', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1956', 'MrBird', '新增宏观数据', '54', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4aee4905\"', '127.0.0.1', '2019-09-17 09:25:25', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1957', 'MrBird', '新增宏观数据', '101', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@c9cd8a7\"', '127.0.0.1', '2019-09-17 09:25:47', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1958', 'MrBird', '新增宏观数据', '102', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5d578798\"', '127.0.0.1', '2019-09-17 09:26:03', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1959', 'MrBird', '新增宏观数据', '75', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@19d3940a\"', '127.0.0.1', '2019-09-17 09:26:14', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1960', 'MrBird', '新增宏观数据', '86', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1be114a4\"', '127.0.0.1', '2019-09-17 09:28:23', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1961', 'MrBird', '新增宏观数据', '82', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@68ad47a7\"', '127.0.0.1', '2019-09-17 09:34:35', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1962', 'MrBird', '新增宏观数据', '77', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7100f229\"', '127.0.0.1', '2019-09-17 09:34:47', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1963', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Tue Sep 17 17:20:59 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-18 11:09:07', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1964', 'MrBird', '新增宏观数据', '109', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@497f7f96\"', '127.0.0.1', '2019-09-18 11:09:32', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1965', 'MrBird', '新增宏观数据', '77', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5676a0c6\"', '127.0.0.1', '2019-09-18 11:11:37', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1966', 'MrBird', '新增宏观数据', '94', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6f391e9a\"', '127.0.0.1', '2019-09-18 11:12:37', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1967', 'MrBird', '新增宏观数据', '67', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2c35e1ec\"', '127.0.0.1', '2019-09-18 11:12:50', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1968', 'MrBird', '新增宏观数据', '72', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2250cc7d\"', '127.0.0.1', '2019-09-18 11:13:04', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1969', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Tue Sep 17 17:20:59 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-09-19 09:41:10', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1970', 'MrBird', '新增宏观数据', '112', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@acba5cb\"', '127.0.0.1', '2019-09-19 09:41:48', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1971', 'MrBird', '新增宏观数据', '39', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@535ecdb7\"', '127.0.0.1', '2019-09-19 09:42:34', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1972', 'MrBird', '新增宏观数据', '74', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@206863ed\"', '127.0.0.1', '2019-09-19 09:42:54', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1973', 'MrBird', '新增宏观数据', '100', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@40ab5e1d\"', '127.0.0.1', '2019-09-19 09:43:05', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1974', 'MrBird', '新增宏观数据', '74', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2617c4cc\"', '127.0.0.1', '2019-09-19 09:43:17', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1975', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Sep 18 19:09:06 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-20 08:37:02', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1976', 'MrBird', '新增宏观数据', '109', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@351f1d47\"', '127.0.0.1', '2019-09-20 08:37:23', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1977', 'MrBird', '新增宏观数据', '302', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7faf2aff\"', '127.0.0.1', '2019-09-20 08:37:46', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1978', 'MrBird', '新增宏观数据', '63', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@440167e7\"', '127.0.0.1', '2019-09-20 08:37:59', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1979', 'MrBird', '新增宏观数据', '66', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@ffd2bd1\"', '127.0.0.1', '2019-09-20 08:38:13', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1980', 'MrBird', '新增宏观数据', '56', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1cfcff12\"', '127.0.0.1', '2019-09-20 08:38:29', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1981', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Fri Sep 20 16:37:01 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-23 09:00:45', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1982', 'MrBird', '新增宏观数据', '115', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@733256b7\"', '127.0.0.1', '2019-09-23 09:01:21', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1983', 'MrBird', '新增宏观数据', '38', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@45b92858\"', '127.0.0.1', '2019-09-23 09:01:39', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1984', 'MrBird', '新增宏观数据', '40', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@71e112f5\"', '127.0.0.1', '2019-09-23 09:01:53', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1985', 'MrBird', '新增宏观数据', '86', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@29423733\"', '127.0.0.1', '2019-09-23 09:02:05', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1986', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@21aed84\"', '127.0.0.1', '2019-09-23 09:02:16', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1987', 'MrBird', '访问系统', '3', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Mon Sep 23 17:00:45 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-24 10:06:25', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1988', 'MrBird', '新增宏观数据', '90', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@10087fd\"', '127.0.0.1', '2019-09-24 10:06:50', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1989', 'MrBird', '新增宏观数据', '77', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@49386751\"', '127.0.0.1', '2019-09-24 10:07:03', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1990', 'MrBird', '新增宏观数据', '83', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@48a318e6\"', '127.0.0.1', '2019-09-24 10:07:15', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1991', 'MrBird', '新增宏观数据', '75', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6b13c10f\"', '127.0.0.1', '2019-09-24 10:07:28', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1992', 'MrBird', '新增宏观数据', '81', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6bdaf6d5\"', '127.0.0.1', '2019-09-24 10:07:42', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1993', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Tue Sep 24 18:06:25 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-25 10:43:33', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1994', 'MrBird', '新增宏观数据', '107', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@31d70405\"', '127.0.0.1', '2019-09-25 10:44:25', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1995', 'MrBird', '新增宏观数据', '43', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@e257357\"', '127.0.0.1', '2019-09-25 10:45:53', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1996', 'MrBird', '新增宏观数据', '42', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@41c94212\"', '127.0.0.1', '2019-09-25 10:46:03', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1997', 'MrBird', '新增宏观数据', '76', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@270b66ba\"', '127.0.0.1', '2019-09-25 10:46:16', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1998', 'MrBird', '新增宏观数据', '96', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5c8bde02\"', '127.0.0.1', '2019-09-25 10:47:30', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('1999', 'MrBird', '访问系统', '4', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Sep 25 18:43:33 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-09-26 11:42:06', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2000', 'MrBird', '新增宏观数据', '218', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1d0e92c0\"', '127.0.0.1', '2019-09-26 11:42:55', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2001', 'MrBird', '新增宏观数据', '70', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@57ad14c3\"', '127.0.0.1', '2019-09-26 11:44:48', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2002', 'MrBird', '新增宏观数据', '71', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@125fe1f0\"', '127.0.0.1', '2019-09-26 11:45:12', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2003', 'MrBird', '新增宏观数据', '122', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@648f844e\"', '127.0.0.1', '2019-09-26 11:45:25', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2004', 'MrBird', '新增宏观数据', '110', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6eaa2dd7\"', '127.0.0.1', '2019-09-26 11:45:42', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2005', 'MrBird', '访问系统', '1', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Thu Sep 26 19:42:06 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-08 09:43:43', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2006', 'MrBird', '新增宏观数据', '103', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6c840f21\"', '127.0.0.1', '2019-10-08 09:44:38', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2007', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@47d4997\"', '127.0.0.1', '2019-10-08 09:45:02', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2008', 'MrBird', '新增宏观数据', '74', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1f9c6f99\"', '127.0.0.1', '2019-10-08 09:45:15', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2009', 'MrBird', '新增宏观数据', '56', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2850e3f6\"', '127.0.0.1', '2019-10-08 09:45:32', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2010', 'MrBird', '新增宏观数据', '71', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@715a53fd\"', '127.0.0.1', '2019-10-08 09:45:46', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2011', 'MrBird', '访问系统', '23', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Tue Oct 08 17:43:43 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-10 09:43:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2012', 'MrBird', '新增宏观数据', '49', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@774cbe9f\"', '127.0.0.1', '2019-10-10 09:44:27', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2013', 'MrBird', '新增宏观数据', '34', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2a21240b\"', '127.0.0.1', '2019-10-10 09:44:55', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2014', 'MrBird', '新增宏观数据', '41', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1cc1b66f\"', '127.0.0.1', '2019-10-10 09:45:11', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2015', 'MrBird', '新增宏观数据', '48', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5cac3d9b\"', '127.0.0.1', '2019-10-10 09:45:23', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2016', 'MrBird', '新增宏观数据', '77', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@123168e6\"', '127.0.0.1', '2019-10-10 09:45:36', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2017', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Thu Oct 10 17:43:52 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-10 10:03:07', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2018', 'MrBird', '新增宏观数据', '85', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2edaff20\"', '127.0.0.1', '2019-10-10 10:03:37', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2019', 'MrBird', '新增宏观数据', '67', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@61d5d7c6\"', '127.0.0.1', '2019-10-10 10:03:55', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2020', 'MrBird', '新增宏观数据', '294', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@51033f35\"', '127.0.0.1', '2019-10-10 10:04:09', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2021', 'MrBird', '新增宏观数据', '78', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@18bee127\"', '127.0.0.1', '2019-10-10 10:04:21', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2022', 'MrBird', '新增宏观数据', '62', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1272906f\"', '127.0.0.1', '2019-10-10 10:04:36', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2023', 'MrBird', '新增宏观数据', '106', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@fc80a54\"', '127.0.0.1', '2019-10-10 10:04:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2024', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Thu Oct 10 18:03:06 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-11 10:00:59', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2025', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@14a377d8\"', '127.0.0.1', '2019-10-11 10:01:30', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2026', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2a26048a\"', '127.0.0.1', '2019-10-11 10:01:54', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2027', 'MrBird', '新增宏观数据', '54', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6cd2fdcb\"', '127.0.0.1', '2019-10-11 10:02:07', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2028', 'MrBird', '新增宏观数据', '84', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@441c19cb\"', '127.0.0.1', '2019-10-11 10:02:20', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2029', 'MrBird', '新增宏观数据', '112', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5200a2a5\"', '127.0.0.1', '2019-10-11 10:02:32', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2030', 'MrBird', '访问系统', '1', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Fri Oct 11 18:00:58 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-14 10:02:02', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2031', 'MrBird', '新增宏观数据', '80', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@78b744ed\"', '127.0.0.1', '2019-10-14 10:02:34', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2032', 'MrBird', '新增宏观数据', '52', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@bb2b4e9\"', '127.0.0.1', '2019-10-14 10:02:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2033', 'MrBird', '新增宏观数据', '82', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2b441f0a\"', '127.0.0.1', '2019-10-14 10:03:17', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2034', 'MrBird', '新增宏观数据', '53', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@506c26e\"', '127.0.0.1', '2019-10-14 10:03:35', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2035', 'MrBird', '新增宏观数据', '40', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@3f6ab5ef\"', '127.0.0.1', '2019-10-14 10:03:47', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2036', 'MrBird', '访问系统', '3', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Mon Oct 14 18:02:02 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-15 10:52:54', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2037', 'MrBird', '新增宏观数据', '96', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@28c2e63e\"', '127.0.0.1', '2019-10-15 10:53:29', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2038', 'MrBird', '新增宏观数据', '100', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7fbee3b9\"', '127.0.0.1', '2019-10-15 10:53:53', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2039', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@61968612\"', '127.0.0.1', '2019-10-15 10:54:04', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2040', 'MrBird', '新增宏观数据', '74', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@52ece47e\"', '127.0.0.1', '2019-10-15 10:54:14', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2041', 'MrBird', '新增宏观数据', '52', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1dd1ee5\"', '127.0.0.1', '2019-10-15 10:54:25', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2042', 'MrBird', '新增宏观数据', '81', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@9d0134a\"', '127.0.0.1', '2019-10-15 10:56:17', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2043', 'MrBird', '新增宏观数据', '63', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@20c24d2f\"', '127.0.0.1', '2019-10-15 10:57:40', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2044', 'MrBird', '新增宏观数据', '75', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@126005bf\"', '127.0.0.1', '2019-10-15 10:58:32', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2045', 'MrBird', '新增宏观数据', '65', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@73fe110a\"', '127.0.0.1', '2019-10-15 10:58:46', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2046', 'MrBird', '访问系统', '3', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Tue Oct 15 18:52:54 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-16 00:42:01', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2047', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@52ea9e64\"', '127.0.0.1', '2019-10-16 00:43:22', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2048', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Oct 16 08:42:01 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-16 10:42:58', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2049', 'MrBird', '新增宏观数据', '53', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6db1aa92\"', '127.0.0.1', '2019-10-16 10:45:09', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2050', 'MrBird', '新增宏观数据', '77', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@55f6847e\"', '127.0.0.1', '2019-10-16 10:45:24', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2051', 'MrBird', '新增宏观数据', '50', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6e1f68c\"', '127.0.0.1', '2019-10-16 10:45:36', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2052', 'MrBird', '新增宏观数据', '94', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5f21035a\"', '127.0.0.1', '2019-10-16 10:45:47', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2053', 'MrBird', '新增宏观数据', '88', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7f7bc99a\"', '127.0.0.1', '2019-10-16 10:46:00', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2054', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Oct 16 18:42:58 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-16 11:51:43', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2055', 'MrBird', '访问系统', '27', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Oct 16 19:51:43 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-10-17 10:32:00', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2056', 'MrBird', '新增宏观数据', '107', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@25ae3c72\"', '127.0.0.1', '2019-10-17 10:32:34', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2057', 'MrBird', '新增宏观数据', '82', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@69b7e4f8\"', '127.0.0.1', '2019-10-17 10:32:51', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2058', 'MrBird', '新增宏观数据', '45', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@22c5d639\"', '127.0.0.1', '2019-10-17 10:33:02', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2059', 'MrBird', '新增宏观数据', '95', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4ebac4b0\"', '127.0.0.1', '2019-10-17 10:33:15', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2060', 'MrBird', '新增宏观数据', '52', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@227f6818\"', '127.0.0.1', '2019-10-17 10:33:29', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2061', 'MrBird', '访问系统', '4', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Thu Oct 17 18:31:59 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-18 11:24:43', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2062', 'MrBird', '新增宏观数据', '65', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@3f2709f6\"', '127.0.0.1', '2019-10-18 11:25:15', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2063', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7f630247\"', '127.0.0.1', '2019-10-18 11:25:27', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2064', 'MrBird', '新增宏观数据', '99', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@b08b559\"', '127.0.0.1', '2019-10-18 11:25:42', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2065', 'MrBird', '新增宏观数据', '93', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4e9ddf20\"', '127.0.0.1', '2019-10-18 11:25:54', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2066', 'MrBird', '新增宏观数据', '48', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@781afd0e\"', '127.0.0.1', '2019-10-18 11:26:10', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2067', 'MrBird', '新增宏观数据', '69', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1e35fc82\"', '127.0.0.1', '2019-10-18 11:27:09', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2068', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Fri Oct 18 19:24:43 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-10-21 10:05:55', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2069', 'MrBird', '新增宏观数据', '108', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@50a94a55\"', '127.0.0.1', '2019-10-21 10:06:20', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2070', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@38f079ab\"', '127.0.0.1', '2019-10-21 10:06:40', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2071', 'MrBird', '新增宏观数据', '74', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7bc9f1a7\"', '127.0.0.1', '2019-10-21 10:07:04', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2072', 'MrBird', '新增宏观数据', '45', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4a8c684\"', '127.0.0.1', '2019-10-21 10:07:19', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2073', 'MrBird', '新增宏观数据', '71', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@33772e97\"', '127.0.0.1', '2019-10-21 10:07:35', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2074', 'MrBird', '访问系统', '1', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Mon Oct 21 18:05:55 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-10-22 10:48:04', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2075', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@45ee691b\"', '127.0.0.1', '2019-10-22 10:48:34', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2076', 'MrBird', '新增宏观数据', '69', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@732d6d84\"', '127.0.0.1', '2019-10-22 10:48:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2077', 'MrBird', '新增宏观数据', '81', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1c2f6ff9\"', '127.0.0.1', '2019-10-22 10:49:04', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2078', 'MrBird', '新增宏观数据', '38', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@485ac04e\"', '127.0.0.1', '2019-10-22 10:49:16', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2079', 'MrBird', '新增宏观数据', '62', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2f024418\"', '127.0.0.1', '2019-10-22 10:49:27', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2080', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@64fc9c6f\"', '127.0.0.1', '2019-10-22 10:53:00', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2081', 'MrBird', '新增宏观数据', '42', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6c3e2fdb\"', '127.0.0.1', '2019-10-22 10:53:12', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2082', 'MrBird', '新增宏观数据', '99', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@27c970ae\"', '127.0.0.1', '2019-10-22 10:56:38', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2083', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6948353a\"', '127.0.0.1', '2019-10-22 10:56:55', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2084', 'MrBird', '访问系统', '1', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Tue Oct 22 18:48:04 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-10-23 10:00:10', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2085', 'MrBird', '新增宏观数据', '116', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@54755f03\"', '127.0.0.1', '2019-10-23 10:00:41', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2086', 'MrBird', '新增宏观数据', '117', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@485ac04e\"', '127.0.0.1', '2019-10-23 10:00:53', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2087', 'MrBird', '新增宏观数据', '80', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@56490806\"', '127.0.0.1', '2019-10-23 10:01:04', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2088', 'MrBird', '新增宏观数据', '51', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@41da2b0b\"', '127.0.0.1', '2019-10-23 10:01:15', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2089', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2f550a5d\"', '127.0.0.1', '2019-10-23 10:01:27', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2090', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Oct 23 18:00:10 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-10-29 10:16:17', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2091', 'MrBird', '新增宏观数据', '104', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@120ddb7f\"', '127.0.0.1', '2019-10-29 10:20:21', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2092', 'MrBird', '新增宏观数据', '76', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@136e34ac\"', '127.0.0.1', '2019-10-29 10:20:35', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2093', 'MrBird', '新增宏观数据', '97', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@30fa32d3\"', '127.0.0.1', '2019-10-29 10:20:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2094', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1bea9a8c\"', '127.0.0.1', '2019-10-29 10:21:08', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2095', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4015ec07\"', '127.0.0.1', '2019-10-29 10:21:32', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2096', 'MrBird', '新增宏观数据', '61', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@331f2e0b\"', '127.0.0.1', '2019-10-29 10:21:46', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2097', 'MrBird', '新增宏观数据', '87', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6249ef29\"', '127.0.0.1', '2019-10-29 10:22:00', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2098', 'MrBird', '新增宏观数据', '89', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@396bad86\"', '127.0.0.1', '2019-10-29 10:22:11', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2099', 'MrBird', '新增宏观数据', '55', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@3af86ff8\"', '127.0.0.1', '2019-10-29 10:22:29', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2100', 'MrBird', '新增宏观数据', '69', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4b17abda\"', '127.0.0.1', '2019-10-29 10:22:45', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2101', 'MrBird', '新增宏观数据', '96', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7a8c8e48\"', '127.0.0.1', '2019-10-29 10:22:57', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2102', 'MrBird', '新增宏观数据', '95', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4648d59b\"', '127.0.0.1', '2019-10-29 10:23:09', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2103', 'MrBird', '新增宏观数据', '63', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4c5f21f5\"', '127.0.0.1', '2019-10-29 10:23:31', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2104', 'MrBird', '新增宏观数据', '96', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6bdea128\"', '127.0.0.1', '2019-10-29 10:23:44', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2105', 'MrBird', '新增宏观数据', '53', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4f167c19\"', '127.0.0.1', '2019-10-29 10:23:55', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2106', 'MrBird', '新增宏观数据', '84', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4adfd776\"', '127.0.0.1', '2019-10-29 10:24:06', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2107', 'MrBird', '新增宏观数据', '96', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@45d8ac8\"', '127.0.0.1', '2019-10-29 10:24:23', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2108', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5e1755b7\"', '127.0.0.1', '2019-10-29 10:24:36', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2109', 'MrBird', '新增宏观数据', '61', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@6243e6fa\"', '127.0.0.1', '2019-10-29 10:24:48', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2110', 'MrBird', '新增宏观数据', '103', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@36a360d9\"', '127.0.0.1', '2019-10-29 10:24:59', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2111', 'MrBird', '访问系统', '1', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Tue Oct 29 18:16:16 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-10-30 10:03:27', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2112', 'MrBird', '新增宏观数据', '87', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@26d5aabf\"', '127.0.0.1', '2019-10-30 10:03:47', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2113', 'MrBird', '新增宏观数据', '81', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@3822fc0d\"', '127.0.0.1', '2019-10-30 10:04:07', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2114', 'MrBird', '新增宏观数据', '94', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4e6fd622\"', '127.0.0.1', '2019-10-30 10:04:18', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2115', 'MrBird', '新增宏观数据', '36', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4c67137a\"', '127.0.0.1', '2019-10-30 10:04:30', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2116', 'MrBird', '新增宏观数据', '72', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4eb82c52\"', '127.0.0.1', '2019-10-30 10:04:41', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2117', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Oct 30 18:03:27 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-10-31 09:52:20', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2118', 'MrBird', '新增宏观数据', '109', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4645450a\"', '127.0.0.1', '2019-10-31 09:52:38', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2119', 'MrBird', '新增宏观数据', '42', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4a2126ef\"', '127.0.0.1', '2019-10-31 09:52:56', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2120', 'MrBird', '新增宏观数据', '55', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@41ba8728\"', '127.0.0.1', '2019-10-31 09:53:13', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2121', 'MrBird', '新增宏观数据', '57', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@69264006\"', '127.0.0.1', '2019-10-31 09:53:25', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2122', 'MrBird', '新增宏观数据', '87', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@68d34a8\"', '127.0.0.1', '2019-10-31 09:53:36', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2123', 'MrBird', '访问系统', '1', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Thu Oct 31 17:52:20 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-11-01 10:12:05', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2124', 'MrBird', '新增宏观数据', '81', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@3a7045de\"', '127.0.0.1', '2019-11-01 10:12:23', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2125', 'MrBird', '新增宏观数据', '78', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@234ee887\"', '127.0.0.1', '2019-11-01 10:12:57', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2126', 'MrBird', '新增宏观数据', '60', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@37dfa888\"', '127.0.0.1', '2019-11-01 10:13:12', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2127', 'MrBird', '新增宏观数据', '60', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@30a3c148\"', '127.0.0.1', '2019-11-01 10:13:28', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2128', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@38f215c0\"', '127.0.0.1', '2019-11-01 10:13:41', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2129', 'MrBird', '访问系统', '1', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Fri Nov 01 18:12:04 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-11-06 10:19:18', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2130', 'MrBird', '新增宏观数据', '153', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5354f525\"', '127.0.0.1', '2019-11-06 10:26:42', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2131', 'MrBird', '新增宏观数据', '50', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@180f32bd\"', '127.0.0.1', '2019-11-06 10:26:53', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2132', 'MrBird', '新增宏观数据', '77', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@29ebb52\"', '127.0.0.1', '2019-11-06 10:27:08', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2133', 'MrBird', '新增宏观数据', '67', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@70c28a04\"', '127.0.0.1', '2019-11-06 10:27:19', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2134', 'MrBird', '新增宏观数据', '30', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5e415524\"', '127.0.0.1', '2019-11-06 10:27:33', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2135', 'MrBird', '新增宏观数据', '104', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@72460051\"', '127.0.0.1', '2019-11-06 10:27:50', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2136', 'MrBird', '新增宏观数据', '43', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2ab7f416\"', '127.0.0.1', '2019-11-06 10:28:05', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2137', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@689387f6\"', '127.0.0.1', '2019-11-06 10:28:21', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2138', 'MrBird', '新增宏观数据', '102', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@51d07f70\"', '127.0.0.1', '2019-11-06 10:28:34', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2139', 'MrBird', '新增宏观数据', '52', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@22502605\"', '127.0.0.1', '2019-11-06 10:28:46', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2140', 'MrBird', '新增宏观数据', '83', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@76d9b624\"', '127.0.0.1', '2019-11-06 10:28:57', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2141', 'MrBird', '新增宏观数据', '69', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@48e7782f\"', '127.0.0.1', '2019-11-06 10:29:13', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2142', 'MrBird', '新增宏观数据', '78', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@63a40f51\"', '127.0.0.1', '2019-11-06 10:29:24', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2143', 'MrBird', '新增宏观数据', '73', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@2a57e2d0\"', '127.0.0.1', '2019-11-06 10:29:36', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2144', 'MrBird', '新增宏观数据', '65', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1a4c7f9c\"', '127.0.0.1', '2019-11-06 10:29:48', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2145', 'MrBird', '访问系统', '0', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Nov 06 18:19:17 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"  org.springframework.validation.BindingResult.user: \"org.springframework.validation.BeanPropertyBindingResult: 0 errors\"', '127.0.0.1', '2019-11-06 11:25:19', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2146', 'MrBird', '访问系统', '1', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Wed Nov 06 19:25:18 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-11-07 09:54:37', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2147', 'MrBird', '新增宏观数据', '138', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@427adaf6\"', '127.0.0.1', '2019-11-07 09:54:58', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2148', 'MrBird', '新增宏观数据', '68', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@184691e3\"', '127.0.0.1', '2019-11-07 09:55:16', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2149', 'MrBird', '新增宏观数据', '50', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@1190b7dd\"', '127.0.0.1', '2019-11-07 09:55:29', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2150', 'MrBird', '新增宏观数据', '58', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5f118f93\"', '127.0.0.1', '2019-11-07 09:55:40', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2151', 'MrBird', '新增宏观数据', '60', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@528e8c89\"', '127.0.0.1', '2019-11-07 09:55:50', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2152', 'MrBird', '访问系统', '4', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Thu Nov 07 17:54:36 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-11-08 09:42:15', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2153', 'MrBird', '新增宏观数据', '90', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@64aedaaf\"', '127.0.0.1', '2019-11-08 09:42:39', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2154', 'MrBird', '新增宏观数据', '89', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5e4577e9\"', '127.0.0.1', '2019-11-08 09:42:55', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2155', 'MrBird', '新增宏观数据', '77', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@5cc494d7\"', '127.0.0.1', '2019-11-08 09:43:09', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2156', 'MrBird', '新增宏观数据', '79', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@307e0dad\"', '127.0.0.1', '2019-11-08 09:43:21', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2157', 'MrBird', '新增宏观数据', '72', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@72aa3961\"', '127.0.0.1', '2019-11-08 09:43:30', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2158', 'MrBird', '访问系统', '2', 'cc.mrbird.system.controller.LoginController.index()', 'user: \"User{userId=4, username=\'MrBird\', password=\'42ee25d1e43e9f57119a00d0a39e5250\', deptId=5, deptName=\'null\', email=\'mrbird@hotmail.com\', mobile=\'13455533222\', status=\'1\', crateTime=Wed Dec 27 23:47:19 CST 2017, modifyTime=Wed Mar 21 17:05:12 CST 2018, lastLoginTime=Fri Nov 08 17:42:15 CST 2019, ssex=\'0\', theme=\'green\', avatar=\'default.jpg\', description=\'我是作者。\', roleName=\'null\'}\"', '127.0.0.1', '2019-11-11 08:31:07', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2159', 'MrBird', '新增宏观数据', '58', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@194fb79a\"', '127.0.0.1', '2019-11-11 08:31:55', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2160', 'MrBird', '新增宏观数据', '81', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@54dda020\"', '127.0.0.1', '2019-11-11 08:34:34', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2161', 'MrBird', '新增宏观数据', '58', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@15069947\"', '127.0.0.1', '2019-11-11 08:34:52', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2162', 'MrBird', '新增宏观数据', '91', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@7a81e69f\"', '127.0.0.1', '2019-11-11 08:35:03', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2163', 'MrBird', '新增宏观数据', '65', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@4985e460\"', '127.0.0.1', '2019-11-11 08:35:14', '内网IP|0|0|内网IP|内网IP');
+INSERT INTO `t_log` VALUES ('2164', 'MrBird', '新增宏观数据', '70', 'cc.mrbird.web.controller.FinanceController.addMacrography()', 'entity: \"cc.mrbird.web.domain.FinanceTrend@385d42ee\"', '127.0.0.1', '2019-11-11 08:36:10', '内网IP|0|0|内网IP|内网IP');
 
 -- ----------------------------
 -- Table structure for t_menu
@@ -2187,7 +2756,7 @@ CREATE TABLE `t_role` (
   `CREATE_TIME` datetime NOT NULL COMMENT '创建时间',
   `MODIFY_TIME` datetime DEFAULT NULL COMMENT '修改时间',
   PRIMARY KEY (`ROLE_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_role
@@ -2351,12 +2920,12 @@ CREATE TABLE `t_user` (
   `AVATAR` varchar(100) DEFAULT NULL COMMENT '头像',
   `DESCRIPTION` varchar(100) DEFAULT NULL COMMENT '描述',
   PRIMARY KEY (`USER_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=167 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `t_user` VALUES ('4', 'MrBird', '42ee25d1e43e9f57119a00d0a39e5250', '5', 'mrbird@hotmail.com', '13455533222', '1', '2017-12-27 15:47:19', '2018-03-21 09:05:12', '2019-08-23 10:02:40', '0', 'green', 'default.jpg', '我是作者。');
+INSERT INTO `t_user` VALUES ('4', 'MrBird', '42ee25d1e43e9f57119a00d0a39e5250', '5', 'mrbird@hotmail.com', '13455533222', '1', '2017-12-27 15:47:19', '2018-03-21 09:05:12', '2019-11-11 08:31:07', '0', 'green', 'default.jpg', '我是作者。');
 INSERT INTO `t_user` VALUES ('6', 'tester', '243e29429b340192700677d48c09d992', '6', 'tester@qq.com', '13888888888', '1', '2017-12-27 17:35:14', '2018-03-27 09:21:08', '2018-01-23 09:17:27', '1', 'teal', 'default.jpg', null);
 INSERT INTO `t_user` VALUES ('23', 'scott', 'ac3af72d9f95161a502fd326865c2f15', '6', 'scott@qq.com', '15134627380', '1', '2017-12-29 16:16:39', '2018-03-29 16:18:36', '2018-03-20 17:59:04', '0', 'blue-grey', 'default.jpg', '我是scott，嗯嗯');
 INSERT INTO `t_user` VALUES ('24', 'smith', '228208eafc74e48c44619cc543fc0efe', '3', 'smith@qq.com', '13364754932', '1', '2017-12-29 16:21:31', '2018-02-27 08:48:16', '2018-02-27 08:48:27', '1', 'teal', 'default.jpg', null);
