@@ -63,7 +63,7 @@ $(document).ready(function() {
     financePara.yTitleName = "融资余额(亿元)";
     financePara.seriesName = "融资余额";
     financePara.tooltip = "(亿元)";
-    showChart($("#container"),financePara);
+    showChart($("#container"),financePara,"spline");
     
     //展示图表 居民消费价格指数
     var cpiPara = {type:"2", startTime:"", endTime:""}
@@ -71,7 +71,7 @@ $(document).ready(function() {
     cpiPara.yTitleName = "同比增长(%)";
     cpiPara.seriesName = "居民消费价格指数";
     cpiPara.tooltip = "(%)";
-    showChart($("#container_cpi"),cpiPara);
+    showChart($("#container_cpi"),cpiPara,"spline");
     
     //展示图表 M2
     var m2Para = {type:"3", startTime:"", endTime:""}
@@ -79,7 +79,7 @@ $(document).ready(function() {
     m2Para.yTitleName = "同比增长(%)";
     m2Para.seriesName = "货币供应量";
     m2Para.tooltip = "(%)";
-    showChart($("#container_m2"),m2Para);
+    showChart($("#container_m2"),m2Para,"spline");
     
     //展示图表 社融
     var socialHarmonyPara = {type:"4", startTime:"", endTime:""}
@@ -87,7 +87,7 @@ $(document).ready(function() {
     socialHarmonyPara.yTitleName = "社融金额(亿元)";
     socialHarmonyPara.seriesName = "社融规模";
     socialHarmonyPara.tooltip = "(亿元)";
-    showChart($("#container_social_harmony"),socialHarmonyPara);
+    showChart($("#container_social_harmony"),socialHarmonyPara,"spline");
     
     //展示图表 GDP季度
     var gdpQuarterPara = {type:"5", startTime:"", endTime:""}
@@ -95,7 +95,7 @@ $(document).ready(function() {
     gdpQuarterPara.yTitleName = "GDP季度增速(%)";
     gdpQuarterPara.seriesName = "GDP季度增速";
     gdpQuarterPara.tooltip = "(%)";
-    showChart($("#container_gdp_quarter"),gdpQuarterPara);
+    showChart($("#container_gdp_quarter"),gdpQuarterPara,"spline");
     
     //展示图表 乘用车同比增长率
     var carSamePara = {type:"6", startTime:"", endTime:""}
@@ -103,7 +103,7 @@ $(document).ready(function() {
     carSamePara.yTitleName = "乘用车同比增速(%)";
     carSamePara.seriesName = "乘用车增速";
     carSamePara.tooltip = "(%)";
-    showChart($("#container_car_same"),carSamePara);
+    showChart($("#container_car_same"),carSamePara,"spline");
     
     //展示图表 乘用车环比增长率
     var carLastPara = {type:"7", startTime:"", endTime:""}
@@ -111,7 +111,7 @@ $(document).ready(function() {
     carLastPara.yTitleName = "乘用车环比增速(%)";
     carLastPara.seriesName = "乘用车增速";
     carLastPara.tooltip = "(%)";
-    showChart($("#container_car_last"),carLastPara);
+    showChart($("#container_car_last"),carLastPara,"spline");
     
     //展示图表 沪深交易量
     var hushenPara = {type:"8", startTime:startTime, endTime:endTime}
@@ -119,9 +119,9 @@ $(document).ready(function() {
     hushenPara.yTitleName = "沪深交易量(亿元)";
     hushenPara.seriesName = "沪深交易量";
     hushenPara.tooltip = "(亿元)";
-    showChart($("#container_hushen"),hushenPara);
+    showChart($("#container_hushen"),hushenPara,"spline");
     
-    //展示图表 沪股通资金流向
+    /*//展示图表 沪股通资金流向
     var huHkPara = {type:"9", startTime:startTime, endTime:endTime}
     huHkPara.chartName = "沪股通资金走势";
     huHkPara.yTitleName = "沪股通资金流入(亿元)";
@@ -135,7 +135,7 @@ $(document).ready(function() {
     shenHkPara.yTitleName = "深股通资金流入(亿元)";
     shenHkPara.seriesName = "深股通资金流入";
     shenHkPara.tooltip = "(亿元)";
-    showChart($("#container_shen_hk"),shenHkPara);
+    showChart($("#container_shen_hk"),shenHkPara);*/
     
     //展示图表 北向资金流向
     var northPara = {type:"11", startTime:startTime, endTime:endTime}
@@ -143,7 +143,7 @@ $(document).ready(function() {
     northPara.yTitleName = "北向资金流入(亿元)";
     northPara.seriesName = "北向资金流入";
     northPara.tooltip = "(亿元)";
-    showChart($("#container_north"),northPara);
+    showChart($("#container_north"),northPara,'column');
 });
 
 function query() {
@@ -155,38 +155,38 @@ function query() {
     financePara.yTitleName = "金额(亿元)";
     financePara.seriesName = "融资余额";
     financePara.tooltip = "(亿元)";
-    showChart($("#container"),financePara);
+    showChart($("#container"),financePara,"spline");
     
     var hushenPara = {type:"8", startTime:startTime, endTime:endTime}
     hushenPara.chartName = "沪深交易量走势";
     hushenPara.yTitleName = "沪深交易量(亿元)";
     hushenPara.seriesName = "沪深交易量";
     hushenPara.tooltip = "(亿元)";
-    showChart($("#container_hushen"),hushenPara);
+    showChart($("#container_hushen"),hushenPara,"spline");
     
-    var huHkPara = {type:"9", startTime:startTime, endTime:endTime}
+    /*var huHkPara = {type:"9", startTime:startTime, endTime:endTime}
     huHkPara.chartName = "沪股通资金走势";
     huHkPara.yTitleName = "沪股通资金流入(亿元)";
     huHkPara.seriesName = "沪股通资金流入";
     huHkPara.tooltip = "(亿元)";
-    showChart($("#container_hu_hk"),huHkPara);
+    showChart($("#container_hu_hk"),huHkPara);*/
     
-    var shenHkPara = {type:"10", startTime:startTime, endTime:endTime}
+    /*var shenHkPara = {type:"10", startTime:startTime, endTime:endTime}
     shenHkPara.chartName = "深股通资金走势";
     shenHkPara.yTitleName = "深股通资金流入(亿元)";
     shenHkPara.seriesName = "深股通资金流入";
     shenHkPara.tooltip = "(亿元)";
-    showChart($("#container_shen_hk"),shenHkPara);
+    showChart($("#container_shen_hk"),shenHkPara);*/
     
     var northPara = {type:"11", startTime:startTime, endTime:endTime}
     northPara.chartName = "北向资金走势";
     northPara.yTitleName = "北向资金流入(亿元)";
     northPara.seriesName = "北向资金流入";
     northPara.tooltip = "(亿元)";
-    showChart($("#container_north"),northPara);
+    showChart($("#container_north"),northPara,'column');
 }
 
-function showChart(obj,para){
+function showChart(obj,para,chartType){
 	
 	$.getJSON(ctx + "finance/financeInfo?sort=asc&type="+para.type+"&startTime="+para.startTime+"&endTime="+para.endTime, function(data) {
         var categories = data.categories;
@@ -194,7 +194,9 @@ function showChart(obj,para){
         
         obj.highcharts({
             chart: {
-                type: "spline",
+                //type: "spline",
+                //type: 'column',
+                type:chartType,
                 animation: Highcharts.svg,
                 marginRight: 0,
                 events: {
